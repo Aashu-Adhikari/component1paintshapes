@@ -39,6 +39,7 @@ namespace PaintShapes
 
         Circle circle;
         Rectangle rectangle;
+        Triangle triangle;
 
         //stores the implement command form implement text
         string implementCmd;
@@ -116,6 +117,7 @@ namespace PaintShapes
             FactoryAbstract shapeFactory = FactProd.getFactory("Shapes");
             shape1 = shapeFactory.getShapes("Circle");
             shape2 = shapeFactory.getShapes("Rectangle");
+            shape3 = shapeFactory.getShapes("Triangle");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -165,20 +167,7 @@ namespace PaintShapes
                                 moveX = Convert.ToInt32(words[1]);//sets the location the shape xaxis
                                 moveY = Convert.ToInt32(words[2]);//sets the location of the shape yaxis
                             }
-                            //if (words[0] == "moveTo")
-                            //{
-                            //if (Convert.ToInt32(words[1]) == locationOutput.Location.X &&
-                            //  Convert.ToInt32(words[2]) == locationOutput.Location.Y)//checks if shape is in different position
-                            // {
-                            //   console_text += "Its in requested position\n\n";
-                            // }
-                            // else
-                            //{
-                            //   moveX = Convert.ToInt32(words[1]);
-                            // moveY = Convert.ToInt32(words[2]);
-                            //console_text += "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
-                            // }
-                            //}
+
 
                             //checks if word holds the value color then
                             if (words[0] == "color")
@@ -207,7 +196,7 @@ namespace PaintShapes
                                 }
                             }
 
-                            //checks for 'paint' word
+                            //checks for 'draw' word
                             if (words[0].Equals("draw"))
                             {
                                 //checks for 'circle' word
@@ -253,6 +242,20 @@ namespace PaintShapes
                                 if (words[1].Equals("polygon"))
                                 {
                                     drawPolygon = true;
+                                }
+
+                                if (words[1].Equals("triangle"))
+                                {
+                                    //created triangle instance of triangle class
+                                    Triangle triangle = new Triangle();
+                                    //Takes the cordination of the trangle
+                                    PointF[] points = { new PointF(100, 100), new PointF(200, 100), new PointF(150, 10) };
+                                    //puts points value to Trangle setter method
+                                    triangle.setPoints(points);
+                                    triangleObjects.Add(triangle);
+                                    //makes draw triangle true
+                                    drawTriangle = true;
+
                                 }
                             }
                         }
@@ -306,6 +309,16 @@ namespace PaintShapes
                 {
                     console_text += "painting Rectangle\n\n";
                     rectangleObject.paint(g, c, thickness); //paint the rectangle
+                }
+            }
+
+
+            if (drawTriangle == true)// draw condition is true then
+            {
+                foreach (Triangle traingleObject in triangleObjects)
+                {
+                    console_text += "painting Triangle\n\n";
+                    traingleObject.paint(g, c, thickness); //draw the triangle
                 }
             }
 
