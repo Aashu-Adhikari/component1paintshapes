@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaintShapes</name>
+    </assembly>
+    <members>
+        <member name="T:PaintShapes.Circle">
+            <summary>
+            Public class Circle which extends the base class Shapes
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Circle constructor which takes the parameter x , y and radius
+            </summary>
+            <param name="x">takes integer x as a paremeter</param>
+            <param name="y">takes integer y as a paremeter</param>
+            <param name="radius">takes integer y as a parameter</param>
+        </member>
+        <member name="M:PaintShapes.Circle.#ctor">
+            <summary>
+            Default Circle constructor
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Circle.#ctor(System.Int32)">
+            <summary>
+            Circle constructor which takes integer=radius paremeter
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:PaintShapes.Circle.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Circle constructor which takes the x and y paremeter and extends base class parameter
+            </summary>
+            <param name="x">takes integer x paremeter</param>
+            <param name="y">takes y integer parameter</param>
+        </member>
+        <member name="M:PaintShapes.Circle.paint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            This method is the inheritance method of base class Shapes which uses drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+            <param name="thickness">takes integer thickness for pen thickness</param>
+        </member>
+        <member name="M:PaintShapes.Circle.fill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            This method is the inheritance method of base class Shapes which uses drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+        </member>
+        <member name="M:PaintShapes.Circle.setRadius(System.Int32)">
+            <summary>
+            This method is the Setter method of the radius
+            </summary>
+            <param name="radius">takes the integer radius as parameter</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:PaintShapes.Circle.getRadius" -->
+        <member name="M:PaintShapes.DefFactoryShapes.isCircle(System.String)">
+            <summary>
+            method to check if shape is circle
+            </summary>
+            <param name="shape">Takes shape as string parameter</param>
+            <returns>if the contition is true then returns true else returns false</returns>
+        </member>
+        <member name="M:PaintShapes.DefFactoryShapes.isRectangle(System.String)">
+            <summary>
+            method to check if shape is Rectangle
+            </summary>
+            <param name="shape">Takes shape as string parameter</param>
+            <returns>if the contition is true then returns true else returns false</returns>
+        </member>
+        <member name="M:PaintShapes.FactoryShapes.getShapes(System.String)">
+            <summary>
+            created an abstract class os shape 
+            </summary>
+            <param name="shapeType">takes string shapeType parameter</param>
+            <returns>if shape has no string then return null</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:PaintShapes.FactProd" -->
+        <member name="F:PaintShapes.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PaintShapes.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PaintShapes.Polygon">
+            <summary>
+            Polygon class which extends the base class Shape class
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Polygon.#ctor">
+            <summary>
+            createed a default constructor
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Polygon.#ctor(System.Drawing.PointF[])">
+            <summary>
+            created a constructor which takes the array of points
+            </summary>
+            <param name="points">takes arrays of points as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Polygon.setPoints(System.Drawing.PointF[])">
+            <summary>
+            this method is the setter method of Points
+            </summary>
+            <param name="points">takes array of points as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Polygon.getPoint">
+            <summary>
+            created a arrays get method which returns the array of ponts
+            </summary>
+            <returns>returns the array of points</returns>
+        </member>
+        <member name="M:PaintShapes.Polygon.fill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+        </member>
+        <member name="M:PaintShapes.Polygon.paint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+            <param name="thickness">takes integer thickness as Pen thickness</param>
+        </member>
+        <member name="M:PaintShapes.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:PaintShapes.Rectangle">
+            <summary>
+            Rectangle class extends the base class Shape class
+            </summary>
+        </member>
+        <member name="F:PaintShapes.Rectangle.height">
+            declaration of variables
+        </member>
+        <member name="F:PaintShapes.Rectangle.width">
+            declaration of variables
+        </member>
+        <member name="M:PaintShapes.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Decleared the parameterized constructor which extends the base class 
+            </summary>
+            <param name="x">takes int x as parameter</param>
+            <param name="y">takes y as parameter</param>
+            <param name="height">takes integer height as parameter</param>
+            <param name="width">takes integer width as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Rectangle.#ctor">
+            <summary>
+            declared default constructor
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Rectangle.paint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+            <param name="thickness">takes integer thickness as Pen thickness</param>
+        </member>
+        <member name="M:PaintShapes.Rectangle.fill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+        </member>
+        <member name="M:PaintShapes.Rectangle.setHeight(System.Int32)">
+            <summary>
+            this method is the set method of the Height
+            </summary>
+            <param name="height">takes integer height as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Rectangle.getHeight">
+            <summary>
+            method get Height
+            </summary>
+            <returns>returns the height of the rectangle</returns>
+        </member>
+        <member name="M:PaintShapes.Rectangle.setWidth(System.Int32)">
+            <summary>
+            set method of width
+            </summary>
+            <param name="width">takes integer width as the parameter</param>
+        </member>
+        <member name="M:PaintShapes.Rectangle.getWidth">
+            <summary>
+            get method of Width
+            </summary>
+            <returns>returns the width of the rectangle</returns>
+        </member>
+        <member name="F:PaintShapes.Shapes.x">
+            decleration of veriables with value
+        </member>
+        <member name="F:PaintShapes.Shapes.y">
+            decleration of veriables with value
+        </member>
+        <member name="F:PaintShapes.Shapes.z">
+            decleration of veriables with value
+        </member>
+        <member name="M:PaintShapes.Shapes.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Shapes.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Declared Parameterized Constructor
+            </summary>
+            <param name="x">takes x as parameter</param>
+            <param name="y">takes y as parameter</param>
+            <param name="z">takes z as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Shapes.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Decleared a parameterized constructor
+            </summary>
+            <param name="x">takes the interger x as the parameter</param>
+            <param name="y">take the integer y as the parameter</param>
+        </member>
+        <member name="M:PaintShapes.Shapes.setX(System.Int32)">
+            <summary>
+            Decleared set method of x
+            </summary>
+            <param name="x">takes x as the parameter</param>
+        </member>
+        <member name="M:PaintShapes.Shapes.getX">
+            <summary>
+            declared get method of y
+            </summary>
+            <returns>returns the Shapes X</returns>
+        </member>
+        <member name="M:PaintShapes.Shapes.setY(System.Int32)">
+            <summary>
+            declared set method of Y
+            </summary>
+            <param name="y">takes int y as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Shapes.getY">
+            <summary>
+            Declared get function of y
+            </summary>
+            <returns>returnst the Shapes Y</returns>
+        </member>
+        <member name="M:PaintShapes.Shapes.paint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Created paint method which uses Drawing Library
+            </summary>
+            <param name="g">takes g as Graphic Function</param>
+            <param name="c">takes c as Color function</param>
+            <param name="thickness">takes thicksness as Pen thickness</param>
+        </member>
+        <member name="M:PaintShapes.Shapes.fill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Created fill method which uses Drawing Library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+        </member>
+        <member name="T:PaintShapes.Triangle">
+            <summary>
+            Trangle class extends the Shape class
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Triangle.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:PaintShapes.Triangle.#ctor(System.Drawing.PointF[])">
+            <summary>
+            created a constructor which takes the array of points
+            </summary>
+            <param name="points">takes arrays of points as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Triangle.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:PaintShapes.Triangle.setPoints(System.Drawing.PointF[])">
+            <summary>
+            this method is the setter method of Points
+            </summary>
+            <param name="points">takes array of points as parameter</param>
+        </member>
+        <member name="M:PaintShapes.Triangle.getPoint">
+            <summary>
+            created a arrays get method which returns the array of ponts
+            </summary>
+            <returns>returns the array of points</returns>
+        </member>
+        <member name="M:PaintShapes.Triangle.fill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+        </member>
+        <member name="M:PaintShapes.Triangle.paint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method is the inheritance of the shape class which uses Drawing library
+            </summary>
+            <param name="g">takes g as Graphic function</param>
+            <param name="c">takes c as Color function</param>
+            <param name="thickness">takes integer thickness as Pen thickness</param>
+        </member>
+        <member name="T:PaintShapes.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:PaintShapes.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:PaintShapes.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

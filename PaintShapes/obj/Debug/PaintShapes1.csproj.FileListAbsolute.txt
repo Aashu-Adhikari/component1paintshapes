@@ -18,3 +18,4 @@ D:\TBC\AES\component1PaintShapes\PaintShapes\obj\Debug\PaintShapes1.csproj.Gener
 D:\TBC\AES\component1PaintShapes\PaintShapes\obj\Debug\PaintShapes1.csproj.CoreCompileInputs.cache
 D:\TBC\AES\component1PaintShapes\PaintShapes\obj\Debug\PaintShapes.exe
 D:\TBC\AES\component1PaintShapes\PaintShapes\obj\Debug\PaintShapes.pdb
+D:\TBC\AES\component1PaintShapes\PaintShapes\bin\Debug\PaintShapes.xml

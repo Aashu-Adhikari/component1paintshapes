@@ -77,7 +77,7 @@ namespace PaintShapes
             moveObjects = new List<MoveDirection>(); //creates array of new move objects
             triangleObjects = new List<Triangle>(); //creates array of new polygon object
             polygonObjects = new List<Polygon>();
-            c = Color.Black;
+            c = Color.White;
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,13 +88,13 @@ namespace PaintShapes
                 "++++++++++++++++++++++++++\n" +
                 "TO DISPLAY SHAPES COMMANDS\n" +
                 "-----------------------------\n" +
-                "paint rectamgle 500 100\n" +
-                "paint circle 100 100\n" +
-                "paint polygon\n" +
+                "draw rectamgle 500 100\n" +
+                "draw circle 100 100\n" +
+                
                 "-----------------------------\n" +
                 "TO CHANGE THE CORDINATES OF THE SHAPES COMMANDS\n" +
                 "-----------------------------\n" +
-                "moveTo 100 100\n" +
+                "move 100 100\n" +
                 "------------------------------\n" +
                 "TO CHANGE THE COLOR AND SIZE OF THE PEN\n" +
                 "--------------------------------\n" +
@@ -160,19 +160,24 @@ namespace PaintShapes
                             //holds invididuals code line
                             words = code_line.Split(value_code, StringSplitOptions.RemoveEmptyEntries);
                             //checks if words has move command then
+                            if (words[0] == "move")
+                            {
+                                moveX = Convert.ToInt32(words[1]);//sets the location the shape xaxis
+                                moveY = Convert.ToInt32(words[2]);//sets the location of the shape yaxis
+                            }
                             //if (words[0] == "moveTo")
                             //{
-                                //if (Convert.ToInt32(words[1]) == locationOutput.Location.X &&
-                                  //  Convert.ToInt32(words[2]) == locationOutput.Location.Y)//checks if shape is in different position
-                               // {
-                                 //   console_text += "Its in requested position\n\n";
-                               // }
-                               // else
-                                //{
-                                 //   moveX = Convert.ToInt32(words[1]);
-                                   // moveY = Convert.ToInt32(words[2]);
-                                    //console_text += "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
-                               // }
+                            //if (Convert.ToInt32(words[1]) == locationOutput.Location.X &&
+                            //  Convert.ToInt32(words[2]) == locationOutput.Location.Y)//checks if shape is in different position
+                            // {
+                            //   console_text += "Its in requested position\n\n";
+                            // }
+                            // else
+                            //{
+                            //   moveX = Convert.ToInt32(words[1]);
+                            // moveY = Convert.ToInt32(words[2]);
+                            //console_text += "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
+                            // }
                             //}
 
                             //checks if word holds the value color then
@@ -211,7 +216,7 @@ namespace PaintShapes
                                     //checks weather the written code is right or wrong
                                     if (!(words.Length == 3))
                                     {
-                                        MessageBox.Show("!!!Wrong Command!!!\neg.paint circle 100");
+                                        MessageBox.Show("!!!Wrong Command!!!\neg.draw circle 100");
 
                                     }
                                     else
@@ -231,7 +236,7 @@ namespace PaintShapes
                                     //checks if the given paramater is wrng then displays message
                                     if (!(words.Length == 4))
                                     {
-                                        MessageBox.Show("!!!Wrong Command!!!\neg.paint rectangle 100 100 ");
+                                        MessageBox.Show("!!!Wrong Command!!!\neg.draw rectangle 100 100 ");
                                     }
                                     else
                                     {
@@ -268,12 +273,13 @@ namespace PaintShapes
                     drawRectangle = false;
                     drawPolygon = false;
                     richTextBox1.Clear();
+                    textBox1.Clear();
                     panel2.Refresh();
                     break;
                 default:
-                    MessageBox.Show("The action command is empty\n" +//if acction text area is empty
+                    MessageBox.Show("The command space is empty\n" +//if acction text area is empty
                         "Or\n" +
-                        "Must be: 'Run' for Execuit the app\n" +
+                        "Must be: 'Run' for the execution\n" +
                         "Must be: 'Clear' for Fresh Start");
                     break;
             }
