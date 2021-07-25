@@ -15,7 +15,7 @@ namespace PaintShapes
     {
 
         
-        Boolean drawCircle, drawRectangle, drawPolygon, drawTriangle, fill;
+        Boolean drawCircle, drawRectangle, drawPolygon, drawTriangle;
         //string variables to store text command text info
         String app;
         //holds the information of words in arrayS
@@ -25,7 +25,7 @@ namespace PaintShapes
         //stores the thickness of pen in integer
         int thickness;
         //FactoryShapes Declared
-        Shapes shape1, shape2, shape3, shape4;
+        Shapes shape1, shape2, shape3;
         //list to hold circle, rectangle, variable, triangle and polygon objects
         List<Circle> circleObjects;
         
@@ -89,7 +89,7 @@ namespace PaintShapes
                 "++++++++++++++++++++++++++\n" +
                 "TO DISPLAY SHAPES COMMANDS\n" +
                 "-----------------------------\n" +
-                "draw rectamgle 500 100\n" +
+                "draw rectangle 500 100\n" +
                 "draw circle 100 100\n" +
                 
                 "-----------------------------\n" +
@@ -272,11 +272,14 @@ namespace PaintShapes
                     rectangleObjects.Clear();
                     moveObjects.Clear();
                     polygonObjects.Clear();
+                    triangleObjects.Clear();
                     drawCircle = false;
                     drawRectangle = false;
                     drawPolygon = false;
+                    drawTriangle = false;
                     richTextBox1.Clear();
                     textBox1.Clear();
+                    
                     panel2.Refresh();
                     break;
                 default:
